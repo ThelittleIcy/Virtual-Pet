@@ -10,5 +10,6 @@ public enum BehavoirEnum
     RUNAWAY = 3,
     SIT = 4,
     COME = 5,
-    RUNTOTARGET = 6
+    RUNTOTARGET = 6,
+    FOLLOW = 7
 }

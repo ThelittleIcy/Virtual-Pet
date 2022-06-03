@@ -24,8 +24,6 @@ public class PlayerCommands : MonoBehaviour
                 {
                     TriggerBehaviour(BehavoirEnum.SIT);
                 }
-
-                //m_isAllowedToCommand = false;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
             {
@@ -33,7 +31,6 @@ public class PlayerCommands : MonoBehaviour
                 {
                     TriggerBehaviour(BehavoirEnum.COME);
                 }
-                //m_isAllowedToCommand = false;
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
             {
@@ -41,7 +38,42 @@ public class PlayerCommands : MonoBehaviour
                 {
                     TriggerBehaviour(BehavoirEnum.RUNTOTARGET);
                 }
-                //m_isAllowedToCommand = false;
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.FOLLOW)))
+                {
+                    TriggerBehaviour(BehavoirEnum.FOLLOW);
+                }
+            }
+            // "Cancels" the current Command
+            else if (Input.GetKeyDown(KeyCode.Backspace))
+            {
+                switch (GameManager.Instance.BlackBoard.Current.BehaviorIndex)
+                {
+                    case BehavoirEnum.NOTHING:
+                        return;
+                    case BehavoirEnum.BARK:
+                        return;
+                    case BehavoirEnum.PICKUP:
+                        return;
+                    case BehavoirEnum.RUNAWAY:
+                        return;
+                    case BehavoirEnum.SIT:
+                        break;
+                    case BehavoirEnum.COME:
+                        break;
+                    case BehavoirEnum.RUNTOTARGET:
+                        break;
+                    case BehavoirEnum.FOLLOW:
+                        break;
+                    default:
+                        break;  
+                }
+                foreach (AAction action in GameManager.Instance.BlackBoard.Current.BelongingActions)
+                {
+                    action.HasFinished = true;  
+                }
             }
         }
     }
@@ -64,6 +96,7 @@ public class PlayerCommands : MonoBehaviour
         {
             if (behaviour.IsTriggered == true)
             {
+                //IsAllowedToCommand = false;
                 return;
             }
         }

@@ -127,6 +127,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c1ec54713e7770c48a32a050bf31ce35, type: 2}
   - {fileID: 11400000, guid: 98b5eeac5040f4347844fa90b0e2f27d, type: 2}
   - {fileID: 11400000, guid: 1fbe270532bd4aa4f92a1097cc7d00d9, type: 2}
+  - {fileID: 11400000, guid: 9d3a8122776b09a44b22db0f19633d8d, type: 2}
   m_BehaviorAnimator: {fileID: 5721137878284569255}
   m_agent: {fileID: 5721137878284569257}
   m_mouthTarget: {fileID: 3748746707702007941}
