@@ -40,7 +40,10 @@ public class InteractionPopUp : MonoBehaviour
             return;
         if (Input.GetKeyDown(KeyCode.F))
         {
-            m_prop.OnDeactivateEvent.Invoke();
+            if (m_prop != null)
+            {
+                m_prop.OnDeactivateEvent.Invoke();
+            }
             OnDeactivateEvent.Invoke();
         }
     }

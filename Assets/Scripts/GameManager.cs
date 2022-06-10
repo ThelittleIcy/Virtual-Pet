@@ -49,4 +49,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ResetPossibilities()
+    {
+        foreach (ScriptablePossibilitie possibilitie in BlackBoard.AllPossibilities)
+        {
+            possibilitie.Possibility = 50;     
+        }
+    }
 }

@@ -47,7 +47,7 @@ public class PlayerCommands : MonoBehaviour
                 }
             }
             // "Cancels" the current Command
-            else if (Input.GetKeyDown(KeyCode.Backspace))
+            else if (Input.GetKeyDown(KeyCode.R))
             {
                 switch (GameManager.Instance.BlackBoard.Current.BehaviorIndex)
                 {

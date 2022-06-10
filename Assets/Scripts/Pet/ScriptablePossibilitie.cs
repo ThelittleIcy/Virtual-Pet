@@ -21,9 +21,9 @@ public class ScriptablePossibilitie : ScriptableObject
                 m_possibility = 99;
                 IsMaxed = true;
             }
-            else if(m_possibility <= 0)
+            else if(m_possibility <= -1)
             {
-                m_possibility = 0;
+                m_possibility = -1;
                 IsMinimum = true;
             }
             else
@@ -34,7 +34,7 @@ public class ScriptablePossibilitie : ScriptableObject
         }
     }
     [SerializeField]
-    [Range(0, 99)]
+    [Range(-1, 99)]
     private int m_possibility = 50;
 
 

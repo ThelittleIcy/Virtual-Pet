@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -20,20 +21,46 @@ public class PlayerMovement : MonoBehaviour
     private float m_mouseY;
 
     private float m_xRotation = 0f;
+
+    public UnityEvent OnOptionsOpenEvent;
+
+    public UnityEvent OnOptionsCloseEvent;
+
+    private bool m_optionsIsOpen = false;
+
+    public void LockMouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void UnLockMouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
     }
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 
     private void Update()
     {
         Movement();
         Rotation();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (m_optionsIsOpen)
+            {
+                OnOptionsCloseEvent.Invoke();
+                m_optionsIsOpen = false;
+            }
+            else
+            {
+                OnOptionsOpenEvent.Invoke();
+                m_optionsIsOpen = true;
+            }
+        }
     }
     private void Movement()
     {
