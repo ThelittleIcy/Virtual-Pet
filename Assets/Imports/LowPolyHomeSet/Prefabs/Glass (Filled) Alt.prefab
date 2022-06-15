@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5301608961766637802}
   - component: {fileID: 6977950615763380918}
   - component: {fileID: 4590932799285083952}
-  m_Layer: 0
+  - component: {fileID: 4640311028809148817}
+  m_Layer: 6
   m_Name: Glass (Filled) Alt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4640311028809148817
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873165167901824250}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.08456802, y: 0.17347506, z: 0.08456801}
+  m_Center: {x: -0.0000017452985, y: 0.087094545, z: 0.00000010617077}

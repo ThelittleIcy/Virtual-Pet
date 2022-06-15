@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 4495950508066076546}
   - component: {fileID: 3478583817860871121}
   - component: {fileID: 8871840067248928121}
-  m_Layer: 0
+  - component: {fileID: 7969249053862954813}
+  m_Layer: 6
   m_Name: Painting Small 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7969249053862954813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183017722259294354}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.20778692, y: 0.2461401, z: 0.13371918}
+  m_Center: {x: 0.000000033527613, y: -0.00046573207, z: -0.0067347623}

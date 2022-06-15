@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7567438061021255890}
   - component: {fileID: 2597780900391375353}
   - component: {fileID: 3116994905836424137}
-  m_Layer: 0
+  - component: {fileID: 1645670871487084328}
+  m_Layer: 6
   m_Name: Simple Coffee (Handle)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1645670871487084328
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4033064743140625027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.14820231, y: 0.15387127, z: 0.1842531}
+  m_Center: {x: 0.00000032782555, y: 0.077294916, z: 0.01611976}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6247493336062128631}
   - component: {fileID: 6820367407693874673}
   - component: {fileID: 3228122405703934983}
-  m_Layer: 0
+  - component: {fileID: 4416817423933548561}
+  m_Layer: 6
   m_Name: Toy Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4416817423933548561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169702417440084009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3303439, y: 0.09532157, z: 0.2760716}
+  m_Center: {x: 0, y: 0.045409013, z: 0.007603012}

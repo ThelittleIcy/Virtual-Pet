@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5073729205512876226}
   - component: {fileID: 4920604852065841957}
   - component: {fileID: 2035043007194935123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Oven Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

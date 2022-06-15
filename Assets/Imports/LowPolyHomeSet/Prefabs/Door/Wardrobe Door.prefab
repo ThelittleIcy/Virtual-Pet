@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8607989461151810556}
   - component: {fileID: 4686955083448258382}
   - component: {fileID: 1728260237709256866}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wardrobe Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}

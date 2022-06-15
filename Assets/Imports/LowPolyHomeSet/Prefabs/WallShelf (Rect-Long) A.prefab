@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7691867744702463434}
   - component: {fileID: 6039746066446333653}
   - component: {fileID: 2435867842672505116}
-  m_Layer: 0
+  - component: {fileID: 8462259248837431265}
+  m_Layer: 6
   m_Name: WallShelf (Rect-Long) A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8462259248837431265
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5605498393911770649}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 0.474613, z: 0.44081652}
+  m_Center: {x: 0, y: 0.000000022351742, z: 0}

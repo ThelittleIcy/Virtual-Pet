@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5421205771938098766}
   - component: {fileID: 1765621416153613460}
   - component: {fileID: 1431163403790679387}
-  m_Layer: 0
+  - component: {fileID: 3115866757877999079}
+  m_Layer: 6
   m_Name: Faucet Ac 2 - Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3115866757877999079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4280512160130831692}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10499067, y: 0.026561407, z: 0.10597679}
+  m_Center: {x: -0.0001867488, y: 0.00985554, z: -0.000028129667}

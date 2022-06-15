@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 3781845187349157622}
   - component: {fileID: 3317673749544924392}
   - component: {fileID: 4640637560014388100}
-  m_Layer: 0
+  - component: {fileID: 1711081468038744275}
+  m_Layer: 6
   m_Name: Mailbox 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +29,8 @@ Transform:
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10.5, y: 0, z: 12}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 337759288319052062}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -81,3 +83,78 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1711081468038744275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1985516468896524683}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48784846, y: 1.1446775, z: 0.5076488}
+  m_Center: {x: 0, y: 0.57233876, z: 0}
+--- !u!1001 &4104652548381164693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3781845187349157622}
+    m_Modifications:
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74531937
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.215
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000007450605
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0000005364418
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -2.4868996e-14
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4469373095007210579, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+      propertyPath: m_Name
+      value: Mailbox Ac
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+--- !u!4 &337759288319052062 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4348597035150200203, guid: f88731da9f5f5ae429a8943790141dab, type: 3}
+  m_PrefabInstance: {fileID: 4104652548381164693}
+  m_PrefabAsset: {fileID: 0}

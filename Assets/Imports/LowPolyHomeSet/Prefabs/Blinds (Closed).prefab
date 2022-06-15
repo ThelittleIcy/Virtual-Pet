@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7565280575353474222}
   - component: {fileID: 5082657966322983432}
   - component: {fileID: 645569715698763906}
-  m_Layer: 0
+  - component: {fileID: 9066789692543581351}
+  m_Layer: 6
   m_Name: Blinds (Closed)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9066789692543581351
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7568653029979850811}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7322533, y: 1.7546947, z: 0.207765}
+  m_Center: {x: -0.000000059604645, y: 0.051356047, z: 0.07275728}

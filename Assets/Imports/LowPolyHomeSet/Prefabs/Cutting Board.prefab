@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8197699914960522512}
   - component: {fileID: 7130006843486785505}
   - component: {fileID: 6065753030970981926}
-  m_Layer: 0
+  - component: {fileID: 275747357561541921}
+  m_Layer: 6
   m_Name: Cutting Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &275747357561541921
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8093000202276757031}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3145612, y: 0.017539244, z: 0.18377033}
+  m_Center: {x: 0, y: 0.02402191, z: 0}

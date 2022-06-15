@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5184496297937308805}
   - component: {fileID: 5137948280375721203}
   - component: {fileID: 3990439494009933017}
-  m_Layer: 0
+  - component: {fileID: 8731276842652739402}
+  m_Layer: 6
   m_Name: Simple Curtains (Closed)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8731276842652739402
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752457845866680527}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7826557, y: 1.6801534, z: 0.21544981}
+  m_Center: {x: 0.00000029802322, y: 0.01677391, z: 0.14174764}

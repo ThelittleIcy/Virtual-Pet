@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5132700583167701522}
   - component: {fileID: 3639530075303732221}
   - component: {fileID: 8660917815476625621}
-  m_Layer: 0
+  - component: {fileID: 6143653895706286079}
+  m_Layer: 6
   m_Name: Flower Wall Pot 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6143653895706286079
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143855994196975241}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0455841, y: 0.29596204, z: 0.58594644}
+  m_Center: {x: 0, y: 0.06800601, z: -0.00053165853}

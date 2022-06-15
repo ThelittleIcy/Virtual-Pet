@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2810662762566781227}
   - component: {fileID: 98199315691595757}
   - component: {fileID: 6169265633841825762}
-  m_Layer: 0
+  - component: {fileID: 8649052469391052629}
+  m_Layer: 6
   m_Name: Outside Sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8649052469391052629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6772867133053815991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.850306, y: 0.6476192, z: 0.770541}
+  m_Center: {x: 0, y: 0.32192448, z: -0.0022900999}

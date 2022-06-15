@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1859247524868937645}
   - component: {fileID: 4654343387659230426}
   - component: {fileID: 8164619417672818978}
-  m_Layer: 0
+  - component: {fileID: 7774149412392415238}
+  m_Layer: 6
   m_Name: Mailbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7774149412392415238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7136503444609546084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48784846, y: 1.1446775, z: 0.5076488}
+  m_Center: {x: 0, y: 0.57233876, z: 0}

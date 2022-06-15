@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8613149854072222297}
   - component: {fileID: 2539746243816333407}
   - component: {fileID: 419495811352145962}
-  m_Layer: 0
+  - component: {fileID: 8296949433505086249}
+  m_Layer: 6
   m_Name: Drawer Ac 1 (Small)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8296949433505086249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4891094563687963843}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.56106603, y: 0.20886853, z: 0.58920646}
+  m_Center: {x: 0, y: 0.087323844, z: 0.073334135}

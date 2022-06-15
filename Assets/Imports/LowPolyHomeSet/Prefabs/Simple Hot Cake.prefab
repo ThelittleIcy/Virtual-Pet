@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 719682500106491001}
   - component: {fileID: 340426488369084950}
   - component: {fileID: 4473273482045698169}
-  m_Layer: 0
+  - component: {fileID: 5381237486315933511}
+  m_Layer: 6
   m_Name: Simple Hot Cake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5381237486315933511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 572913713290734053}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.12561297, y: 0.013576362, z: 0.12561297}
+  m_Center: {x: 0.0000004991889, y: 0.00689028, z: -0.000000040978193}

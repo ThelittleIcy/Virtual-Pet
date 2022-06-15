@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7490313057991792607}
   - component: {fileID: 3209394153275084157}
   - component: {fileID: 1146062193467502801}
-  m_Layer: 0
+  - component: {fileID: 5302596508482687600}
+  m_Layer: 6
   m_Name: Drawer B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5302596508482687600
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2504932645568747094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5555712, y: 0.94913673, z: 0.77003646}
+  m_Center: {x: 0, y: 0.47268325, z: -0.02597469}

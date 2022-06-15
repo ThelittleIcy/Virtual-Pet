@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7852694576884660236}
   - component: {fileID: 5775125591971870196}
   - component: {fileID: 8882993672058177211}
-  m_Layer: 0
+  - component: {fileID: -4842612621127171054}
+  m_Layer: 6
   m_Name: Ceiling Lamp 1 Main Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-4842612621127171054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5260439499865847428}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2750483, y: 0.06880899, z: 0.12311189}
+  m_Center: {x: 0.0010507107, y: -0.007896313, z: 0.0028776843}

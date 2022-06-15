@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8850181396375028071}
   - component: {fileID: 4656259977950608536}
   - component: {fileID: 1425099292636459058}
-  m_Layer: 0
+  - component: {fileID: 5763951732442338279}
+  m_Layer: 6
   m_Name: Printer Acc2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5763951732442338279
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4998708993589335496}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.69574994, y: 0.018069353, z: 0.3813585}
+  m_Center: {x: 0, y: 0.005461039, z: 0.18876451}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7958372534540086987}
   - component: {fileID: 4016035479925864512}
   - component: {fileID: 5487983926855679176}
-  m_Layer: 0
+  - component: {fileID: 7916810126421047369}
+  m_Layer: 6
   m_Name: Gamer Chair Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7916810126421047369
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7745921567653007929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6281187, y: 0.36757523, z: 0.5016891}
+  m_Center: {x: 0, y: 0.62042415, z: 0.0015881881}

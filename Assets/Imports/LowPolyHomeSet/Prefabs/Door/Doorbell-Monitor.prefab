@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7150455473191034457}
   - component: {fileID: 7174368167981255182}
   - component: {fileID: 3132778831878219073}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Doorbell-Monitor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

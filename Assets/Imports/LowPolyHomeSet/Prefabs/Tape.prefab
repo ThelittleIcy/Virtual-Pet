@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 271232327726614969}
   - component: {fileID: 851229296664693782}
   - component: {fileID: 7250993449064825235}
-  m_Layer: 0
+  - component: {fileID: 7915225481599915151}
+  m_Layer: 6
   m_Name: Tape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7915225481599915151
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 810940724560113471}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1289943, y: 0.04233189, z: 0.1267852}
+  m_Center: {x: -0.0015743375, y: 0.000000010244548, z: 0.0004989654}

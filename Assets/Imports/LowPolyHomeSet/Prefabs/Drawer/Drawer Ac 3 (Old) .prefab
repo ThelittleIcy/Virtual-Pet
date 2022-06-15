@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 9180348484368368185}
   - component: {fileID: 7519323141412411438}
   - component: {fileID: 5233916396446471504}
-  m_Layer: 0
+  - component: {fileID: 8801558375918990153}
+  m_Layer: 6
   m_Name: 'Drawer Ac 3 (Old) '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8801558375918990153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9053330087669059991}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4674693, y: 0.20083433, z: 0.6376459}
+  m_Center: {x: 0, y: 0.07359511, z: 0.09755387}

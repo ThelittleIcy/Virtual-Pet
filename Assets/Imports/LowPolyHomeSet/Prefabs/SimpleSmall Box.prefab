@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1125676415492836170}
   - component: {fileID: 209251058281903898}
   - component: {fileID: 8387061307358907703}
-  m_Layer: 0
+  - component: {fileID: 3512528817236120085}
+  m_Layer: 6
   m_Name: SimpleSmall Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3512528817236120085
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8891217403838684400}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.29580978, y: 0.10946442, z: 0.1687629}
+  m_Center: {x: 0.000000014901161, y: 0.05473221, z: 0}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8796907273673834134}
   - component: {fileID: 7457914658082863859}
   - component: {fileID: 4935725364177222440}
-  m_Layer: 0
+  - component: {fileID: 7978522392802631995}
+  m_Layer: 6
   m_Name: RFan_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7978522392802631995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320342387851063687}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7506205, y: 0.013688087, z: 1.7478144}
+  m_Center: {x: 0, y: -0.08836199, z: 0}

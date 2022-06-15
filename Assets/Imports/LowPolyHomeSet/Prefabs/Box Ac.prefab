@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2337576047639897313}
   - component: {fileID: 1101772948776493449}
   - component: {fileID: 9177281825015097310}
-  m_Layer: 0
+  - component: {fileID: 3126063412267153908}
+  m_Layer: 6
   m_Name: Box Ac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3126063412267153908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679282039864752704}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34718147, y: 0.0063536484, z: 0.65000004}
+  m_Center: {x: -0.16859068, y: 0, z: 0}

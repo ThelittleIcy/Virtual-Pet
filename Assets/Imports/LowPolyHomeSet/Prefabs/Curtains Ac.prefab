@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6181325640171694429}
   - component: {fileID: 7762106202968510055}
   - component: {fileID: 6867438489609778438}
-  m_Layer: 0
+  - component: {fileID: 1192129922592588983}
+  m_Layer: 6
   m_Name: Curtains Ac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1192129922592588983
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4879720260179574349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7964801, y: 0.08698416, z: 0.08663563}
+  m_Center: {x: 0, y: 0.000000009313226, z: 0}

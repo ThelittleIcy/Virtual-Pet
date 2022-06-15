@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 992161460138052138}
   - component: {fileID: 9119815052807615710}
   - component: {fileID: 5126085595977669235}
-  m_Layer: 0
+  - component: {fileID: 6566453284397806297}
+  m_Layer: 6
   m_Name: Perfume 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6566453284397806297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4779998403843230341}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.063191935, y: 0.21818776, z: 0.06319165}
+  m_Center: {x: 0, y: 0.10909388, z: 0}

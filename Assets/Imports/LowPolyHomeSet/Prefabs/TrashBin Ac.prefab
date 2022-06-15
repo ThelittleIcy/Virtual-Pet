@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6181055868214278913}
   - component: {fileID: 7491733540532908653}
   - component: {fileID: 1932214118225421656}
-  m_Layer: 0
+  - component: {fileID: 7424139115391246300}
+  m_Layer: 6
   m_Name: TrashBin Ac
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7424139115391246300
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417383895874235169}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2902401, y: 0.019030498, z: 0.30059376}
+  m_Center: {x: -0.000000022351742, y: 0.00321778, z: 0.13959686}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2108403798771189855}
   - component: {fileID: 705104314315870042}
   - component: {fileID: 3238708503356721913}
-  m_Layer: 0
+  - component: {fileID: 7368490982469329919}
+  m_Layer: 6
   m_Name: Stray 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7368490982469329919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2635614100958493984}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.4879012, y: 0.037373636, z: 0.1971862}
+  m_Center: {x: -0.000000074505806, y: 0.018686818, z: -0.0000000037252903}

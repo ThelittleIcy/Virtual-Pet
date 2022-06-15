@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2069113235139444190}
   - component: {fileID: 6513956067574279886}
   - component: {fileID: 7595993823132777639}
-  m_Layer: 0
+  - component: {fileID: 6335504347446966112}
+  m_Layer: 6
   m_Name: Coffee Machine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6335504347446966112
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8065332204246863740}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2883985, y: 0.36578596, z: 0.2883985}
+  m_Center: {x: 0, y: 0.18289295, z: -0.000000007450581}

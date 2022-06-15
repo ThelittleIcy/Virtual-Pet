@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5399127780368012237}
   - component: {fileID: 8883037817344454156}
   - component: {fileID: 4433076121464415164}
-  m_Layer: 0
+  - component: {fileID: 2701232661271226514}
+  m_Layer: 6
   m_Name: Kitchen Knob.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2701232661271226514
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7393632732315536696}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.0775604, y: 0.07323588, z: 0.07756041}
+  m_Center: {x: -0.00000059232116, y: 0.019858278, z: -0.0000000018626451}

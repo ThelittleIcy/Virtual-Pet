@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6971650107366221037}
   - component: {fileID: 7536817203841861101}
   - component: {fileID: 5577129494741650749}
-  m_Layer: 0
+  - component: {fileID: 7544116896513422205}
+  m_Layer: 6
   m_Name: Bed (1) Sheets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7544116896513422205
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4074396786260254069}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3014615, y: 0.50210464, z: 1.9874742}
+  m_Center: {x: 0, y: -0.044029705, z: 0.287027}

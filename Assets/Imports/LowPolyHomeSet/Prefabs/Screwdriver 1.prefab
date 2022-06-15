@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1600747121250772090}
   - component: {fileID: 1946217964163886456}
   - component: {fileID: 6906307533869230652}
-  m_Layer: 0
+  - component: {fileID: 7785715477149694672}
+  m_Layer: 6
   m_Name: Screwdriver 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7785715477149694672
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6498653540073799327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.025445756, y: 0.02544576, z: 0.25177523}
+  m_Center: {x: -0.0000000041909516, y: -0.0000000013969839, z: -0.00004182756}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 798013464916074639}
   - component: {fileID: 1930149238261599245}
   - component: {fileID: 8913926632662492110}
-  m_Layer: 0
+  - component: {fileID: 1903466291249006036}
+  m_Layer: 6
   m_Name: Calculator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1903466291249006036
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186024691588566749}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.15572372, y: 0.05150105, z: 0.28018206}
+  m_Center: {x: 0, y: 0.004887323, z: 0.0021147951}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 494770450816527617}
   - component: {fileID: 7201237948612232410}
   - component: {fileID: 3565847424230793054}
-  m_Layer: 0
+  - component: {fileID: 6571507615159693770}
+  m_Layer: 6
   m_Name: Drawer Door 2 (Old - Small)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6571507615159693770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5802003989858681706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2596024, y: 0.73059493, z: 0.10016301}
+  m_Center: {x: 0.12604062, y: 0.4132286, z: 0.015009321}

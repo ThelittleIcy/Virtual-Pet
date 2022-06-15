@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 97498982962616838}
   - component: {fileID: 5487002037787050514}
   - component: {fileID: 9109980858982628640}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Door Handle 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8881669106569521358}
   - component: {fileID: 6455459596256700775}
   - component: {fileID: 978873724638226200}
-  m_Layer: 0
+  - component: {fileID: 142735151590091599}
+  m_Layer: 6
   m_Name: Roof Border 2 (End)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &142735151590091599
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275953582240588812}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.36800158, y: 0.37399897, z: 2.1999996}
+  m_Center: {x: 0.000000007450581, y: -0.075, z: -0.099999785}
