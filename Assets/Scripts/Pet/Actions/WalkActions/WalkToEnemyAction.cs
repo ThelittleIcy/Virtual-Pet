@@ -20,7 +20,7 @@ public class WalkToEnemyAction : WalkToLocationAction
 
     public override void SelectAim()
     {
-        Aim = GameManager.Instance.Enemy;
+        Aim = GameManager.Instance.Enemy.transform.position;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 6f;
     }
 }

@@ -21,7 +21,7 @@ public class WalkAwayFromPlayer : WalkToLocationAction
 
     public override void SelectAim()
     {
-        Aim = GameManager.Instance.FleePlace;
+        Aim = GameManager.Instance.FleePlace.transform.position;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 0f;
     }
 }

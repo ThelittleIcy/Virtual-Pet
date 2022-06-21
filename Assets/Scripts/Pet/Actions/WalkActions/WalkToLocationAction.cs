@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class WalkToLocationAction : AAction
 {
-    public GameObject Aim { get => m_aim; set => m_aim = value; }
+    public Vector3 Aim { get => m_aim; set => m_aim = value; }
     [SerializeField]
-    private GameObject m_aim;
+    private Vector3 m_aim;
     public override void Start()
     {
         GameManager.Instance.BlackBoard.Agent.isStopped = false;
@@ -83,7 +83,7 @@ public class WalkToLocationAction : AAction
     //}
     private void Move()
     {
-        GameManager.Instance.BlackBoard.Agent.SetDestination(Aim.transform.position);
+        GameManager.Instance.BlackBoard.Agent.SetDestination(Aim);
         if (isClose())
         {
             HasFinished = true;
@@ -102,7 +102,7 @@ public class WalkToLocationAction : AAction
 
     private float CalculateDistanceToAim()
     {
-        return Vector3.Distance(Aim.transform.position, GameManager.Instance.BlackBoard.gameObject.transform.position);
+        return Vector3.Distance(Aim, GameManager.Instance.BlackBoard.gameObject.transform.position);
     }
 
     [ContextMenu("IsFinished")]

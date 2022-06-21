@@ -11,5 +11,7 @@ public enum BehavoirEnum
     SIT = 4,
     COME = 5,
     RUNTOTARGET = 6,
-    FOLLOW = 7
+    FOLLOW = 7,
+    TURNAROUND = 8, 
+    DIGGING = 9
 }

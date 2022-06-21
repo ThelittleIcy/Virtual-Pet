@@ -20,7 +20,7 @@ public class WalkToPillow : WalkToLocationAction
 
     public override void SelectAim()
     {
-        Aim = GameManager.Instance.Pillow;
+        Aim = GameManager.Instance.Pillow.transform.position;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
     }
 }

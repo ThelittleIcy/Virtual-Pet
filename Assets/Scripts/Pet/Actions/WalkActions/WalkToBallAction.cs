@@ -20,7 +20,7 @@ public class WalkToBallAction : WalkToLocationAction
 
     public override void SelectAim()
     {
-        Aim = GameManager.Instance.Ball;
+        Aim = GameManager.Instance.Ball.transform.position;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
     }
 }

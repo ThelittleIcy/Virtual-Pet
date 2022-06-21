@@ -20,6 +20,24 @@ public class AnimationHandler : MonoBehaviour
         m_animator.SetBool("IsSitting", false);
     }
 
+    public void ActivateTurning()
+    {
+        m_animator.SetBool("IsTurning", true);
+    }
+    public void DeActivateTurning()
+    {
+        m_animator.SetBool("IsTurning", false);
+    }
+
+    public void ActivateDigging()
+    {
+        m_animator.SetBool("IsDigging", true);
+    }
+    public void DeActivateDiggin()
+    {
+        m_animator.SetBool("IsDigging", false);
+    }
+
     public void ActivateBarking()
     {
         m_animator.SetBool("IsBarking", true);
