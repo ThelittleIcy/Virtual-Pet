@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject m_pillow;
 
+    public GameObject FleePlace { get => m_fleePlace; set => m_fleePlace = value; }
+    [SerializeField]
+    private GameObject m_fleePlace;
+
     public AnimationHandler Animations { get => m_animations; set => m_animations = value; }
     [SerializeField]
     private AnimationHandler m_animations;
@@ -47,6 +51,12 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
         }
+
+        foreach (ScriptablePossibilitie pos in BlackBoard.AllPossibilities)
+        {
+            pos.Possibility = PlayerPrefs.GetInt(pos.name, pos.Possibility);
+        }
+        PlayerPrefs.DeleteAll();
     }
 
     public void ResetPossibilities()
@@ -55,5 +65,19 @@ public class GameManager : MonoBehaviour
         {
             possibilitie.Possibility = 50;     
         }
+    }
+    private void OnApplicationQuit()
+    {
+        foreach (ScriptablePossibilitie pos in BlackBoard.AllPossibilities)
+        {
+            PlayerPrefs.SetInt(pos.name, pos.Possibility);
+        }
+        PlayerPrefs.Save();
+    }
+
+    [ContextMenu("ResetPlayerPrefs")]
+    private void PlayerPrefReset()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }

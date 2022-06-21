@@ -15,6 +15,13 @@ public class PlayerCommands : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            foreach (AAction action in GameManager.Instance.BlackBoard.Current.BelongingActions)
+            {
+                action.HasFinished = true;
+            }
+        }
         CheckTriggeredBehaviour();
         if (IsAllowedToCommand)
         {
@@ -46,35 +53,6 @@ public class PlayerCommands : MonoBehaviour
                     TriggerBehaviour(BehavoirEnum.FOLLOW);
                 }
             }
-            // "Cancels" the current Command
-            else if (Input.GetKeyDown(KeyCode.R))
-            {
-                switch (GameManager.Instance.BlackBoard.Current.BehaviorIndex)
-                {
-                    case BehavoirEnum.NOTHING:
-                        return;
-                    case BehavoirEnum.BARK:
-                        return;
-                    case BehavoirEnum.PICKUP:
-                        return;
-                    case BehavoirEnum.RUNAWAY:
-                        return;
-                    case BehavoirEnum.SIT:
-                        break;
-                    case BehavoirEnum.COME:
-                        break;
-                    case BehavoirEnum.RUNTOTARGET:
-                        break;
-                    case BehavoirEnum.FOLLOW:
-                        break;
-                    default:
-                        break;  
-                }
-                foreach (AAction action in GameManager.Instance.BlackBoard.Current.BelongingActions)
-                {
-                    action.HasFinished = true;  
-                }
-            }
         }
     }
 
@@ -96,7 +74,7 @@ public class PlayerCommands : MonoBehaviour
         {
             if (behaviour.IsTriggered == true)
             {
-                //IsAllowedToCommand = false;
+                IsAllowedToCommand = false;
                 return;
             }
         }
@@ -119,7 +97,7 @@ public class PlayerCommands : MonoBehaviour
     {
         foreach (ScriptablePossibilitie possibilitie in GameManager.Instance.BlackBoard.AllPossibilities)
         {
-            if(possibilitie.BelongingBehaviour == _currentBehaviour)
+            if (possibilitie.BelongingBehaviour == _currentBehaviour)
             {
                 return possibilitie;
             }

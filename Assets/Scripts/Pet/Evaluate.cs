@@ -23,7 +23,7 @@ public class Evaluate : StateMachineBehaviour
         {
             for (int i = 0; i < BlackBoard.AllBehaviors.Count; i++)
             {
-                
+
                 if (BlackBoard.AllBehaviors[i].IsTriggered == true)
                 {
                     animator.SetInteger("CurrentBehavior", (int)BlackBoard.AllBehaviors[i].BehaviorIndex);
@@ -35,28 +35,63 @@ public class Evaluate : StateMachineBehaviour
         if (!m_behaviourWasChoosen)
         {
             // Warscheinlichkeiten
-            for (int j = 0; j < BlackBoard.AllBehaviors.Count; j++)
+            List<int> borders = new List<int>();
+            List<BehavoirEnum> behavoirEnums = new List<BehavoirEnum>();
+            int SumOfPossibilities = 0;
+            foreach (ScriptablePossibilitie possibilitie in BlackBoard.AllPossibilities)
             {
-                int rnd = Random.Range(0, 100);
-                ScriptablePossibilitie currentPossibilitie = new ScriptablePossibilitie();
-                for (int i = 0; i < BlackBoard.AllPossibilities.Count; i++)
+                if (possibilitie.Possibility >= 0)
                 {
-                    if (BlackBoard.AllPossibilities[i].BelongingBehaviour == BlackBoard.AllBehaviors[j].BehaviorIndex)
-                    {
-                        currentPossibilitie = BlackBoard.AllPossibilities[i];
-                    }
+                    borders.Add(SumOfPossibilities + possibilitie.Possibility);
+                    behavoirEnums.Add(possibilitie.BelongingBehaviour);
+                    SumOfPossibilities += possibilitie.Possibility;
                 }
-
-                if (currentPossibilitie.Possibility >= rnd)
+            }
+            int rnd = Random.Range(0, SumOfPossibilities + 1);
+            Debug.Log(rnd);
+            for (int i = 0; i < borders.Count; i++)
+            {
+                if (rnd <= borders[i])
                 {
-                    animator.SetInteger("CurrentBehavior", (int)BlackBoard.AllBehaviors[j].BehaviorIndex);
-                    BlackBoard.Current = BlackBoard.AllBehaviors[j];
+                    int behaviourIndex = 0;
+                    for (int j = 0; j < BlackBoard.AllBehaviors.Count; j++)
+                    {
+                        if(BlackBoard.AllBehaviors[j].BehaviorIndex == behavoirEnums[i])
+                        {
+                            behaviourIndex = j;
+                        }
+                    }
+
+                    animator.SetInteger("CurrentBehavior", (int)BlackBoard.AllBehaviors[behaviourIndex].BehaviorIndex);
+                    BlackBoard.Current = BlackBoard.AllBehaviors[behaviourIndex];
                     m_behaviourWasChoosen = true;
                     return;
                 }
             }
+
+
+            //for (int j = 0; j < BlackBoard.AllBehaviors.Count; j++)
+            //{
+            //    int rnd = Random.Range(0, 100);
+            //    ScriptablePossibilitie currentPossibilitie = new ScriptablePossibilitie();
+            //    for (int i = 0; i < BlackBoard.AllPossibilities.Count; i++)
+            //    {
+            //        if (BlackBoard.AllPossibilities[i].BelongingBehaviour == BlackBoard.AllBehaviors[j].BehaviorIndex)
+            //        {
+            //            currentPossibilitie = BlackBoard.AllPossibilities[i];
+            //        }
+            //    }
+
+            //    if (currentPossibilitie.Possibility >= rnd)
+            //    {
+            //        animator.SetInteger("CurrentBehavior", (int)BlackBoard.AllBehaviors[j].BehaviorIndex);
+            //        BlackBoard.Current = BlackBoard.AllBehaviors[j];
+            //        m_behaviourWasChoosen = true;
+            //        return;
+            //    }
+            //}
         }
-        
+
     }
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

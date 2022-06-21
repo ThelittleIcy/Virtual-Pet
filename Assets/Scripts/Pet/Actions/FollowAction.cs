@@ -16,6 +16,14 @@ public class FollowAction : AAction
     public override void Update()
     {
         base.Update();
+        if (GameManager.Instance.BlackBoard.Agent.velocity == Vector3.zero)
+        {
+            Handler.DeActivateWalking();
+        }
+        else
+        {
+            Handler.ActivateWalking();
+        }
         Move();
     }
 

@@ -7,7 +7,6 @@ public class WalkToLocationAction : AAction
     public GameObject Aim { get => m_aim; set => m_aim = value; }
     [SerializeField]
     private GameObject m_aim;
-
     public override void Start()
     {
         GameManager.Instance.BlackBoard.Agent.isStopped = false;
@@ -20,6 +19,14 @@ public class WalkToLocationAction : AAction
     public override void Update()
     {
         base.Update();
+        if (GameManager.Instance.BlackBoard.Agent.velocity == Vector3.zero)
+        {
+            Handler.DeActivateWalking();
+        }
+        else
+        {
+            Handler.ActivateWalking();
+        }
         Move();
     }
 
@@ -86,7 +93,7 @@ public class WalkToLocationAction : AAction
 
     private bool isClose()
     {
-        if(CalculateDistanceToAim() <= GameManager.Instance.BlackBoard.Agent.stoppingDistance)
+        if (CalculateDistanceToAim() <= GameManager.Instance.BlackBoard.Agent.stoppingDistance)
         {
             return true;
         }

@@ -9,7 +9,7 @@ public class DoorProp : ReactionProp
     private Animator m_animator;
 
     [SerializeField]
-    private InteractionPopUp m_interaction;
+    private PropInteraction m_interaction;
 
     [ContextMenu("ActivateDoor")]
     public override void Activate()
@@ -24,13 +24,13 @@ public class DoorProp : ReactionProp
 
     public void OpenAnimationFinished()
     {
-        m_interaction.Collider.enabled = true;
+        m_interaction.Interaction.Collider.enabled = true;
         IsUsed = true;
     }
 
     public void CloseAnimationFinished()
     {
-        m_interaction.Collider.enabled = false;
+        m_interaction.Interaction.Collider.enabled = false;
         IsUsed = false;
     }
 }

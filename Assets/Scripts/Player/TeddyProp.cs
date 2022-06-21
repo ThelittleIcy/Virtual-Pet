@@ -10,7 +10,7 @@ public class TeddyProp : ReactionProp
     private Transform m_target;
 
     [SerializeField]
-    private InteractionPopUp m_interaction;
+    private PropInteraction m_interaction;
 
     [SerializeField]
     private float m_speed = 1f;
@@ -38,7 +38,7 @@ public class TeddyProp : ReactionProp
         }
         if (this.transform.position == m_origin.position)
         {
-            m_interaction.Collider.enabled = false;
+            m_interaction.Interaction.Collider.enabled = false;
             IsUsed = false;
             yield break;
         }
@@ -56,7 +56,7 @@ public class TeddyProp : ReactionProp
         }
         if (this.transform.position == m_target.position)
         {
-            m_interaction.Collider.enabled = true;
+            m_interaction.Interaction.Collider.enabled = true;
             IsUsed = true;
             yield break;
         }

@@ -1099,7 +1099,7 @@ MonoBehaviour:
   m_handler: {fileID: 0}
   m_behaviour: 3
   m_aim: {fileID: 0}
-  m_stopDistance: 10
+  m_stopDistance: 5
 --- !u!114 &8527854024980623130
 MonoBehaviour:
   m_ObjectHideFlags: 1

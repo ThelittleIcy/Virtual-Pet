@@ -30,7 +30,7 @@ Transform:
   m_LocalPosition: {x: 12.5, y: 2, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 112876267653356866}
+  - {fileID: 8301879432194390560}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.21614954, y: 0.091665715, z: 0.21614957}
   m_Center: {x: 0.000000078231096, y: -0.017000958, z: 0.00000027939677}
---- !u!1 &5346685342294910396
+--- !u!1 &3127592997432675856
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,45 +104,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 112876267653356866}
-  - component: {fileID: 6774493333473779954}
+  - component: {fileID: 8301879432194390560}
+  - component: {fileID: 3237210179745526722}
   m_Layer: 6
-  m_Name: Spot Light
+  m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &112876267653356866
+--- !u!4 &8301879432194390560
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346685342294910396}
-  m_LocalRotation: {x: 0.7071057, y: -0, z: -0, w: 0.7071079}
+  m_GameObject: {fileID: 3127592997432675856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4857435297071934464}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!108 &6774493333473779954
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &3237210179745526722
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5346685342294910396}
+  m_GameObject: {fileID: 3127592997432675856}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.990566, g: 0.8762384, b: 0.5644357, a: 1}
-  m_Intensity: 5
-  m_Range: 7.2901554
-  m_SpotAngle: 74.89481
-  m_InnerSpotAngle: 12.913168
+  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Intensity: 2
+  m_Range: 10
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
