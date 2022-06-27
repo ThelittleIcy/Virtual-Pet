@@ -8,6 +8,8 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 /UserSettings/
+/[Bb]uild/Windows/
+/[Bb]uild/Mac/
 ProjectVersion.txt
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
