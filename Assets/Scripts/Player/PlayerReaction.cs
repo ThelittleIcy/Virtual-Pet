@@ -31,6 +31,11 @@ public class PlayerReaction : MonoBehaviour
     [SerializeField]
     private ScriptableInt m_reactionValue;
 
+    [SerializeField]
+    private AudioSource m_positiveReactionSound;
+    [SerializeField]
+    private AudioSource m_negativeReactionSound;
+
 
     private void Awake()
     {
@@ -155,6 +160,7 @@ public class PlayerReaction : MonoBehaviour
             //pos.Possibility += 5;
             pos.Add(m_reactionValue.Value);
         }
+        m_positiveReactionSound.Play();
     }
 
     private void DecreasePossibilitie(ReactionEnum _effectiveReaction)
@@ -174,6 +180,7 @@ public class PlayerReaction : MonoBehaviour
             m_timeLeft = m_startTime;
             pos.Decrease(m_reactionValue.Value);
         }
+        m_negativeReactionSound.Play();
     }
 
     private IEnumerator Timer()

@@ -207,10 +207,10 @@ MonoBehaviour:
   m_DoorWarning: {fileID: 0}
   m_teddy: {fileID: 0}
   m_door: {fileID: 0}
-  m_possibilitieChangeValue: 5
   m_effectiveReactionEffect: {fileID: 0}
   m_startTime: 5
   m_timeLeft: 0
+  m_reactionValue: {fileID: 11400000, guid: d0c4b813eff0a124f9f977fee17edd26, type: 2}
 --- !u!54 &5362797444692966953
 Rigidbody:
   m_ObjectHideFlags: 0
