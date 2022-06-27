@@ -21,15 +21,15 @@ public class PlayerReaction : MonoBehaviour
     private DoorProp m_door;
 
     [SerializeField]
-    private int m_possibilitieChangeValue;
-
-    [SerializeField]
     private VisualEffect m_effectiveReactionEffect;
 
     [SerializeField]
     private float m_startTime = 50;
     [SerializeField]
     private float m_timeLeft = 0;
+
+    [SerializeField]
+    private ScriptableInt m_reactionValue;
 
 
     private void Awake()
@@ -145,7 +145,7 @@ public class PlayerReaction : MonoBehaviour
         if (GameManager.Instance.BlackBoard.Current.EffectiveReinforceReaction == _effectiveReaction)
         {
             //pos.Possibility += 10;
-            pos.Add(m_possibilitieChangeValue + 2);
+            pos.Add(m_reactionValue.Value + 2);
             m_timeLeft = m_startTime;
             StartCoroutine(Timer());
             m_effectiveReactionEffect.Play();
@@ -153,7 +153,7 @@ public class PlayerReaction : MonoBehaviour
         else
         {
             //pos.Possibility += 5;
-            pos.Add(m_possibilitieChangeValue);
+            pos.Add(m_reactionValue.Value);
         }
     }
 
@@ -163,7 +163,7 @@ public class PlayerReaction : MonoBehaviour
         if (GameManager.Instance.BlackBoard.Current.EffectivePunishmentReaction == _effectiveReaction)
         {
             //pos.Possibility -= 10;
-            pos.Decrease(m_possibilitieChangeValue + 2);
+            pos.Decrease(m_reactionValue.Value + 2);
             m_timeLeft = m_startTime;
             StartCoroutine(Timer());
             m_effectiveReactionEffect.Play();
@@ -172,7 +172,7 @@ public class PlayerReaction : MonoBehaviour
         {
             //pos.Possibility -= 5;
             m_timeLeft = m_startTime;
-            pos.Decrease(m_possibilitieChangeValue);
+            pos.Decrease(m_reactionValue.Value);
         }
     }
 
