@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c694b5d399621c1459a30d9106a2c2dc, type: 3}
-  m_Name: DigginBehaviour
+  m_Name: ComeCommand
   m_EditorClassIdentifier: 
-  m_possibility: -1
-  m_belongingBehaviour: 9
+  m_possibility: 99
+  m_belongingBehaviour: 5

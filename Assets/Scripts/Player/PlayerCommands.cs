@@ -13,6 +13,12 @@ public class PlayerCommands : MonoBehaviour
     [SerializeField]
     private PopUpHandler m_positiveRespond;
 
+    [SerializeField]
+    private List<ScriptablePossibilitie> m_commandPossibilities;
+
+    [SerializeField]
+    private ScriptableInt m_enhanceValue;
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -30,6 +36,7 @@ public class PlayerCommands : MonoBehaviour
                 if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.SIT)))
                 {
                     TriggerBehaviour(BehavoirEnum.SIT);
+                    GetBelongingPossibilite(BehavoirEnum.SIT).Possibility += m_enhanceValue.Value;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Alpha2))
@@ -37,6 +44,7 @@ public class PlayerCommands : MonoBehaviour
                 if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.COME)))
                 {
                     TriggerBehaviour(BehavoirEnum.COME);
+                    GetBelongingPossibilite(BehavoirEnum.COME).Possibility += m_enhanceValue.Value;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -44,6 +52,7 @@ public class PlayerCommands : MonoBehaviour
                 if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.RUNTOTARGET)))
                 {
                     TriggerBehaviour(BehavoirEnum.RUNTOTARGET);
+                    GetBelongingPossibilite(BehavoirEnum.RUNTOTARGET).Possibility += m_enhanceValue.Value;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.Alpha4))
@@ -51,6 +60,47 @@ public class PlayerCommands : MonoBehaviour
                 if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.FOLLOW)))
                 {
                     TriggerBehaviour(BehavoirEnum.FOLLOW);
+                    GetBelongingPossibilite(BehavoirEnum.FOLLOW).Possibility += m_enhanceValue.Value;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.BARK)))
+                {
+                    TriggerBehaviour(BehavoirEnum.BARK);
+                    GetBelongingPossibilite(BehavoirEnum.BARK).Possibility += m_enhanceValue.Value;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha6))
+            {
+                if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.RUNAWAY)))
+                {
+                    TriggerBehaviour(BehavoirEnum.RUNAWAY);
+                    GetBelongingPossibilite(BehavoirEnum.RUNAWAY).Possibility += m_enhanceValue.Value;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha7))
+            {
+                if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.PICKUP)))
+                {
+                    TriggerBehaviour(BehavoirEnum.PICKUP);
+                    GetBelongingPossibilite(BehavoirEnum.PICKUP).Possibility += m_enhanceValue.Value;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha8))
+            {
+                if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.DIGGING)))
+                {
+                    TriggerBehaviour(BehavoirEnum.DIGGING);
+                    GetBelongingPossibilite(BehavoirEnum.DIGGING).Possibility += m_enhanceValue.Value;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.Alpha9))
+            {
+                if (CheckSucces(GetBelongingPossibilite(BehavoirEnum.TURNAROUND)))
+                {
+                    TriggerBehaviour(BehavoirEnum.TURNAROUND);
+                    GetBelongingPossibilite(BehavoirEnum.TURNAROUND).Possibility += m_enhanceValue.Value;
                 }
             }
         }
@@ -63,7 +113,6 @@ public class PlayerCommands : MonoBehaviour
             if (behaviour.BehaviorIndex == _behaviour)
             {
                 behaviour.OnTriggeredEvent.Invoke();
-                Debug.Log(behaviour.BehaviorIndex);
             }
         }
     }
@@ -95,7 +144,7 @@ public class PlayerCommands : MonoBehaviour
 
     private ScriptablePossibilitie GetBelongingPossibilite(BehavoirEnum _currentBehaviour)
     {
-        foreach (ScriptablePossibilitie possibilitie in GameManager.Instance.BlackBoard.AllPossibilities)
+        foreach (ScriptablePossibilitie possibilitie in m_commandPossibilities)
         {
             if (possibilitie.BelongingBehaviour == _currentBehaviour)
             {

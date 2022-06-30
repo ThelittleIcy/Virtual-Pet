@@ -48,7 +48,6 @@ public class Evaluate : StateMachineBehaviour
                 }
             }
             int rnd = Random.Range(0, SumOfPossibilities + 1);
-            Debug.Log(rnd);
             for (int i = 0; i < borders.Count; i++)
             {
                 if (rnd <= borders[i])
