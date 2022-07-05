@@ -23,7 +23,8 @@ public class WalkToRandomTreasureSpot : WalkToLocationAction
 
     public override void SelectAim()
     {
-        Aim = m_treasures[0].Postition;
+        int rnd = Random.Range(0, m_treasures.Count);
+        Aim = m_treasures[rnd].Postition;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
     }
 }

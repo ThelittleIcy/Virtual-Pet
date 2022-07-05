@@ -12,20 +12,25 @@ public class PickUpAction : AAction
         base.Start();
         m_ball = GameManager.Instance.Ball;
         m_mouth = GameManager.Instance.BlackBoard.MouthTarget;
+
+        if (m_ball.GetComponent<BallController>().IsPickedUp == true)
+        {
+            HasFinished = true;
+            return;
+        }
+
+
         PickUp();
-        //Debug.Log("PickUp Start");
     }
 
     public override void Update()
     {
         base.Update();
-        //Debug.Log("PickUp Update");
     }
 
     public override void Exit()
     {
         base.Exit();
-        //Debug.Log("PickUp Exit");
     }
 
     private void PickUp()
@@ -35,8 +40,10 @@ public class PickUpAction : AAction
         m_ball.GetComponent<Rigidbody>().useGravity = false;
         m_ball.transform.SetParent(m_mouth.gameObject.transform);
         m_ball.transform.position = m_mouth.transform.position;
-        Debug.Log("Mouth" + m_mouth.transform.position + " Ball" + m_ball.transform.position);
-        //m_ball.transform.position = m_mouth.transform.position;
+
+        m_ball.GetComponent<BallController>().IsPickedUp = true;
+        m_ball.GetComponent<BallController>().CanBePickedUp = false;
+
         HasFinished = true;
     }
 

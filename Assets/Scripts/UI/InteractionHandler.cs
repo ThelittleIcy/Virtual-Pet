@@ -9,7 +9,12 @@ public class InteractionHandler : MonoBehaviour
     public UnityEvent OnActivateEvent;
     public UnityEvent OnDeactivateEvent;
 
+    [SerializeField]
+    private bool m_isActivated = false;
+
     public SphereCollider Collider { get => m_collider; set => m_collider = value; }
+    public bool IsActivated { get => m_isActivated; set => m_isActivated = value; }
+
     private SphereCollider m_collider;
 
     private void Awake()
@@ -20,11 +25,21 @@ public class InteractionHandler : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
+        {
             OnActivateEvent.Invoke();
+            m_isActivated = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
-             OnDeactivateEvent.Invoke();
+        if (other.gameObject.CompareTag("Player")) { 
+            OnDeactivateEvent.Invoke();
+            m_isActivated = false;
+        }
     }
+
+
+
+
+
 }

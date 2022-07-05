@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c694b5d399621c1459a30d9106a2c2dc, type: 3}
-  m_Name: RunToPillowCommand
+  m_Script: {fileID: 11500000, guid: 90035d06e88b63a47ae2d89e18d855e4, type: 3}
+  m_Name: SmartphoneTreasure
   m_EditorClassIdentifier: 
-  m_possibility: 52
-  m_belongingBehaviour: 6
+  m_postition: {x: -5.8999996, y: 4.91, z: 55.35}

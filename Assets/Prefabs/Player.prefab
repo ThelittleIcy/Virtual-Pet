@@ -189,6 +189,17 @@ MonoBehaviour:
   m_isAllowedToCommand: 1
   m_negativeRespond: {fileID: 0}
   m_positiveRespond: {fileID: 0}
+  m_commandPossibilities:
+  - {fileID: 11400000, guid: 4b2074f1e6d323340abb7ca48e206c18, type: 2}
+  - {fileID: 11400000, guid: 686a449de0cca6b4db638c8bf2ae10ed, type: 2}
+  - {fileID: 11400000, guid: 58944f20f54beb14c888099bfae3b056, type: 2}
+  - {fileID: 11400000, guid: 1687bdda045cd1a46a83ff862b75474a, type: 2}
+  - {fileID: 11400000, guid: ea73041186055fa4c9dbbf59438e0813, type: 2}
+  - {fileID: 11400000, guid: 702b4a39c56ec7941984d94bdc67617b, type: 2}
+  - {fileID: 11400000, guid: 01a2d0a2ca6da5f4996706f49f48d9a9, type: 2}
+  - {fileID: 11400000, guid: fd0755795c021e44191e1b25c5a27652, type: 2}
+  - {fileID: 11400000, guid: a985f584e4701904a87d55f101701eac, type: 2}
+  m_enhanceValue: {fileID: 0}
 --- !u!114 &5362797444692966955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +222,8 @@ MonoBehaviour:
   m_startTime: 5
   m_timeLeft: 0
   m_reactionValue: {fileID: 11400000, guid: d0c4b813eff0a124f9f977fee17edd26, type: 2}
+  m_positiveReactionSound: {fileID: 0}
+  m_negativeReactionSound: {fileID: 0}
 --- !u!54 &5362797444692966953
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -9,6 +9,9 @@ public class Enemy : MonoBehaviour
     private Transform[] m_WayPoint;
 
     [SerializeField]
+    private Animator m_animator;
+
+    [SerializeField]
     private NavMeshAgent m_agent;
     [SerializeField]
     private float m_waitTime = 5f;
@@ -16,6 +19,8 @@ public class Enemy : MonoBehaviour
 
     private int m_currentPoint = 0;
     private bool m_isWaiting = false;
+    [SerializeField]
+    private float m_walkingAnimation = 1;
 
     private void Awake()
     {
@@ -28,9 +33,12 @@ public class Enemy : MonoBehaviour
     private void Update()
     {
         CheckCurrentWayPoint();
+        float velocity = m_agent.velocity.magnitude / m_agent.speed;
+        m_animator.SetFloat("Walking", velocity);
         if (!m_isWaiting)
         {
             m_agent.SetDestination(m_WayPoint[m_currentPoint].transform.position);
+            
         }
     }
 
@@ -66,7 +74,7 @@ public class Enemy : MonoBehaviour
             {
                 m_currentWaitTime--;
                 yield return new WaitForSeconds(1f);
-            }   
+            }
         }
     }
     private void OnTriggerEnter(Collider other)

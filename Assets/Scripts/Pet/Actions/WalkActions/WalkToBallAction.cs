@@ -7,11 +7,11 @@ public class WalkToBallAction : WalkToLocationAction
     public override void Start()
     {
         base.Start();
-        SelectAim();
     }
     public override void Update()
     {
         base.Update();
+        SelectAim();
     }
     public override void Exit()
     {

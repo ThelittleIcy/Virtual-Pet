@@ -10,6 +10,7 @@ public class LetGoAction : AAction
         base.Start();
 
         m_ball = GameManager.Instance.Ball;
+
         LetGo();
     }
 
@@ -32,6 +33,10 @@ public class LetGoAction : AAction
         m_ball.GetComponentInChildren<SphereCollider>().enabled = true;
         m_ball.GetComponent<Rigidbody>().isKinematic = false;
         m_ball.GetComponent<Rigidbody>().useGravity = true;
+
+        m_ball.GetComponent<BallController>().IsPickedUp = false;
+        m_ball.GetComponent<BallController>().CanBePickedUp = true;
+
         HasFinished = true;
     }
 

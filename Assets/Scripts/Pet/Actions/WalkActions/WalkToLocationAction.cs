@@ -88,7 +88,6 @@ public class WalkToLocationAction : AAction
         {
             HasFinished = true;
         }
-        // If Different Movement hier Switch Case
     }
 
     private bool isClose()

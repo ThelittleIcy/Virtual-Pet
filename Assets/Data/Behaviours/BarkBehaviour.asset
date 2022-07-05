@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c694b5d399621c1459a30d9106a2c2dc, type: 3}
   m_Name: BarkBehaviour
   m_EditorClassIdentifier: 
-  m_possibility: -1
+  m_possibility: 50
   m_belongingBehaviour: 1
