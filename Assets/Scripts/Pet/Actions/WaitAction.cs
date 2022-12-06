@@ -4,31 +4,39 @@ using UnityEngine;
 
 public class WaitAction : AAction
 {
+    // The Timer at the Start.
     [SerializeField]
     private float m_startTimer = 5f;
+    // The Current Timer.
     [SerializeField]
     private float m_currentTime = 0f;
+    /// <summary>
+    /// See AAction Start. Sets Animation and resets the current Time to the start Time.
+    /// </summary>
     public override void Start()
     {
         base.Start();
         m_currentTime = m_startTimer;
         Handler.ActivateIdle();
-        //Debug.Log("Wait Start");
     }
-
+    /// <summary>
+    /// See AAction Update. Reduces Timer.
+    /// </summary>
     public override void Update()
     {
         base.Update();
         ReduceAndCheckTimer();
-        //Debug.Log("Wait Update");
     }
-
+    /// <summary>
+    /// See AAction Exit. 
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
-        //Debug.Log("Wait Exit");
     }
-
+    /// <summary>
+    /// Reduces the Timer and Checks, if it is zero.
+    /// </summary>
     private void ReduceAndCheckTimer()
     {
         if (m_currentTime > 0)
@@ -39,11 +47,5 @@ public class WaitAction : AAction
         {
             HasFinished = true;
         }
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
-        HasFinished = true;
     }
 }

@@ -6,39 +6,50 @@ using UnityEngine.Animations;
 
 public abstract class ABehavior : StateMachineBehaviour
 {
+    // Event, which is Invoken when the Behaviour is Triggered.
     public UnityEvent OnTriggeredEvent;
-
+    // List of All Actions, which belonge to this Behaviour.
     public List<AAction> BelongingActions;
-
+    //The Current Action.
     public AAction CurrentAction { get => m_currentAction; set => m_currentAction = value; }
     [SerializeField]
     private AAction m_currentAction;
+    // Says, if the Behaviour is Triggered.
     public bool IsTriggered { get => m_isTriggered; set => m_isTriggered = value; }
     [SerializeField]
     private bool m_isTriggered = false;
+    // Says, if the Player has Reacted to this Behaviour to avoid multiple Reactions at once.
     public bool PlayerHasReacted { get => m_playerHasReacted; set => m_playerHasReacted = value; }
     [SerializeField]
     private bool m_playerHasReacted = false;
-
-    public BehavoirEnum BehaviorIndex { get => m_BehaviorIndex; set => m_BehaviorIndex = value; }
+    // The Behaviour 
+    public BehaviourEnum BehaviorIndex { get => m_BehaviorIndex; set => m_BehaviorIndex = value; }
     [SerializeField]
-    private BehavoirEnum m_BehaviorIndex;
-
+    private BehaviourEnum m_BehaviorIndex;
+    // The Effective Reinforce Reaction for this Behaviour.
     public ReactionEnum EffectiveReinforceReaction { get => m_effectiveReinforceReaction; set => m_effectiveReinforceReaction = value; }
     [SerializeField]
     private ReactionEnum m_effectiveReinforceReaction;
-
+    // The Effective Punishment Reaction for this Behaviour.
     public ReactionEnum EffectivePunishmentReaction { get => m_effectivePunishmentReaction; set => m_effectivePunishmentReaction = value; }
     [SerializeField]
     private ReactionEnum m_effectivePunishmentReaction;
 
+    // The index for the current Action.
     private int m_currentActionIndex = 0;
 
+    // Adds The Triggered Methode to the OnTriggeredEvent.
     public virtual void Awake()
     {
         OnTriggeredEvent.AddListener(Triggered);
     }
-
+    /// <summary>
+    /// Called at the Start of this Behaviour. Sets up Variables and adds the Actions.
+    /// Starts the First Action.
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="stateInfo"></param>
+    /// <param name="layerIndex"></param>
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerHasReacted = false;
@@ -56,16 +67,23 @@ public abstract class ABehavior : StateMachineBehaviour
                 }
             }
             actions.Clear();
-            // Problem : Gets ALL Actions even if they don't Belong to this State // SOLVED (I HOPE)
         }
         if (BelongingActions.Count == 0)
-            return; // ExitState!
-
+            return; // And Exits the State.
+        // Sets and Starts Current Action.
         m_currentActionIndex = 0;
         CurrentAction = BelongingActions[0];
         CurrentAction.Start();
     }
-
+    /// <summary>
+    /// The Update Function. 
+    /// Checks if the current Action is Finished.
+    ///     Sets the next Action or ends the Behaviour.
+    ///     Updates the Current Action
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="stateInfo"></param>
+    /// <param name="layerIndex"></param>
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (BelongingActions.Count == 0)
@@ -75,9 +93,8 @@ public abstract class ABehavior : StateMachineBehaviour
             m_currentActionIndex++;
             if (m_currentActionIndex >= BelongingActions.Count)
             {
-                // Exit Allgemein!
                 animator.SetBool("CurrentBehaviorFinished", true);
-                return;
+                return; // And Exits the State.
             }
             CurrentAction.Exit();
             CurrentAction = BelongingActions[m_currentActionIndex];
@@ -85,7 +102,13 @@ public abstract class ABehavior : StateMachineBehaviour
         }
         CurrentAction.Update();
     }
-
+    /// <summary>
+    /// Called at the End of this Behaviour.
+    /// Resets the Variables and Exits the Current Action.
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="stateInfo"></param>
+    /// <param name="layerIndex"></param>
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (BelongingActions.Count == 0)
@@ -93,14 +116,19 @@ public abstract class ABehavior : StateMachineBehaviour
         CurrentAction.Exit();
         IsTriggered = false;
         animator.SetBool("CurrentBehaviorFinished", false);
-        //GameManager.Instance.BlackBoard.Current = null;
+        GameManager.Instance.BlackBoard.Current = null;
     }
-
+    /// <summary>
+    /// Sets IsTriggered to true.
+    /// </summary>
     public virtual void Triggered()
     {
         IsTriggered = true;
     }
 
+    /// <summary>
+    /// For Testing Purpose: Triggeres this Behaviour.
+    /// </summary>
     [ContextMenu("Trigger")]
     public void TestTriggering()
     {

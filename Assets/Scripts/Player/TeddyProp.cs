@@ -4,28 +4,37 @@ using UnityEngine;
 
 public class TeddyProp : ReactionProp
 {
+    // The Origin Position.
     [SerializeField]
     private Transform m_origin;
+    //  The Target Position.
     [SerializeField]
     private Transform m_target;
-
+    // The Interaction.
     [SerializeField]
     private PropInteraction m_interaction;
-
+    // The MovementSpeed.
     [SerializeField]
     private float m_speed = 1f;
 
-
+    /// <summary>
+    /// Activates this Doll (Moves To Shelf)
+    /// </summary>
     public override void Activate()
     {
         StartCoroutine(MoveToShelf());
     }
-
+    /// <summary>
+    /// Deactivates this Doll (Moves to the Ground)
+    /// </summary>
     public override void Deactivate()
     {
         StartCoroutine(MoveToGround());
     }
-
+    /// <summary>
+    /// Moves the Gameobject to The Origin position.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator MoveToGround()
     {
         float time = 0f;
@@ -43,7 +52,10 @@ public class TeddyProp : ReactionProp
             yield break;
         }
     }
-
+    /// <summary>
+    /// Moves this Gameobject to the Target Position.
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator MoveToShelf()
     {
         float time = 0f;

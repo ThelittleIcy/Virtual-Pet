@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class AmbientSoundManager : MonoBehaviour
 {
+    // List of the Different Ambient (Background) Sounds
     public List<AudioSource> AmbientSounds { get => m_ambientSounds; set => m_ambientSounds = value; }
     [SerializeField]
     private List<AudioSource> m_ambientSounds;
 
+    // The Current Sound.
     private int m_current = 0;
 
-
+    /// <summary>
+    /// Playes the First Background Sound.
+    /// </summary>
     private void Start()
     {
         AmbientSounds[m_current].Play();
     }
+    /// <summary>
+    /// Checks if the Currently played Ambient is still being played.
+    ///     Increases to the next Sound or starts form the first again.
+    /// </summary>
     private void Update()
     {
         if (!AmbientSounds[m_current].isPlaying)

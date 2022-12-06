@@ -4,32 +4,29 @@ using UnityEngine;
 
 public class BarkAction : AAction
 {
-
+    /// <summary>
+    /// Function, which is called at the Start of the Action. Sets up this Action and Animation.
+    /// </summary>
     public override void Start()
     {
         base.Start();
         GameManager.Instance.BlackBoard.Agent.enabled = false;
         Handler.ActivateBarking();
-        //Debug.Log("Bark Start");
     }
-
+    /// <summary>
+    /// See AAction Update.
+    /// </summary>
     public override void Update()
     {
         base.Update();
-        //Debug.Log("Bark Update");
     }
-
+    /// <summary>
+    /// Function, which is called at the End of the Action. Resets this Action and Animation.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
         GameManager.Instance.BlackBoard.Agent.enabled = true;
         Handler.DeActivateBarking();
-        //Debug.Log("Bark Exit");
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
-        HasFinished = true;
     }
 }

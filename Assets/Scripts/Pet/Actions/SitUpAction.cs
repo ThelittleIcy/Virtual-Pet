@@ -4,30 +4,27 @@ using UnityEngine;
 
 public class SitUpAction : AAction
 {
-    // In Animation HasFinshed setzten
+    /// <summary>
+    /// Function, which is called at the Start of the Action. Sets up the Action and Animation.
+    /// </summary>
     public override void Start()
     {
         base.Start();
         GameManager.Instance.BlackBoard.Agent.enabled = false;
-        //Debug.Log("SitUp Start");
     }
-
+    /// <summary>
+    /// See AAction Update.
+    /// </summary>
     public override void Update()
     {
         base.Update();
-        //Debug.Log("SitUp Update");
     }
-
+    /// <summary>
+    /// See AAction Exit.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
         GameManager.Instance.BlackBoard.Agent.enabled = true;
-        //Debug.Log("SitUp Exit");
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
-        HasFinished = true;
     }
 }

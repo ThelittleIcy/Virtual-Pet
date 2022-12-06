@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class LetGoAction : AAction
 {
+    // The Ball.
     private GameObject m_ball;
+
+    /// <summary>
+    /// Function, which is called at the Start of the Action. Sets the Ball and Lets it go.
+    /// </summary>
     public override void Start()
     {
         base.Start();
@@ -13,36 +18,35 @@ public class LetGoAction : AAction
 
         LetGo();
     }
-
+    /// <summary>
+    /// See AAction Update.
+    /// </summary>
     public override void Update()
     {
         base.Update();
-        //Debug.Log("LetGo Update");
     }
-
+    /// <summary>
+    /// See AAction Exit.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
-        //Debug.Log("LetGo Exit");
     }
-
+    /// <summary>
+    /// Turns on the Rigidbody and Collider of the Ball and unparents it from the AI.
+    /// The Ball can be Picked up Again. 
+    /// Ends this Action.
+    /// </summary>
     private void LetGo()
     {
-        //m_ball.transform.position = new Vector3(m_ball.transform.position.x, 0, m_ball.transform.position.z);
         m_ball.transform.SetParent(null);
         m_ball.GetComponentInChildren<SphereCollider>().enabled = true;
         m_ball.GetComponent<Rigidbody>().isKinematic = false;
         m_ball.GetComponent<Rigidbody>().useGravity = true;
 
-        m_ball.GetComponent<BallController>().IsPickedUp = false;
+        m_ball.GetComponent<BallController>().IsPickedUpbyPlayer = false;
         m_ball.GetComponent<BallController>().CanBePickedUp = true;
 
-        HasFinished = true;
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
         HasFinished = true;
     }
 }

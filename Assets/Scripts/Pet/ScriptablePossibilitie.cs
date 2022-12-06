@@ -5,11 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Data", menuName = "BehaviourPossibilities")]
 public class ScriptablePossibilitie : ScriptableObject
 {
+    // Says, if the Possibilitie is already Maxed.
     public bool IsMaxed { get => m_isMaxed; set => m_isMaxed = value; }
     private bool m_isMaxed;
+    // Says, if the Possibilitie is already at its Minimum.
     public bool IsMinimum { get => m_isMinimum; set => m_isMinimum = value; }
     private bool m_isMinimum;
-
+    // The Possibility Value.
     public int Possibility
     {
         get => m_possibility;
@@ -36,12 +38,15 @@ public class ScriptablePossibilitie : ScriptableObject
     [SerializeField]
     [Range(-1, 99)]
     private int m_possibility = 50;
-
-
-    public BehavoirEnum BelongingBehaviour { get => m_belongingBehaviour; set => m_belongingBehaviour = value; }
+    // The Belonging Behaviour to this Possibilitie.
+    public BehaviourEnum BelongingBehaviour { get => m_belongingBehaviour; set => m_belongingBehaviour = value; }
     [SerializeField]
-    private BehavoirEnum m_belongingBehaviour;
+    private BehaviourEnum m_belongingBehaviour;
 
+    /// <summary>
+    /// Increases the Possibilitie.
+    /// </summary>
+    /// <param name="_value">the value</param>
     public void Add(int _value)
     {
         if(IsMaxed == true)
@@ -51,6 +56,10 @@ public class ScriptablePossibilitie : ScriptableObject
         }
         Possibility = Possibility + _value;
     }
+    /// <summary>
+    /// Decreases the Possibilitie.
+    /// </summary>
+    /// <param name="_value">the value</param>
     public void Decrease(int _value)
     {
         if(IsMinimum == true)
@@ -60,7 +69,9 @@ public class ScriptablePossibilitie : ScriptableObject
         }
         Possibility = Possibility - _value;
     }
-
+    /// <summary>
+    /// Sets the Possibilitie to its default value 50.
+    /// </summary>
     public void SetToDefault()
     {
         Possibility = 50;

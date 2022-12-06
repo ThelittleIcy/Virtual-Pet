@@ -4,21 +4,37 @@ using UnityEngine;
 
 public class Evaluate : StateMachineBehaviour
 {
+    // The Blackboard for the Pet.
     public PetBlackboard BlackBoard { get => m_blackBoard; set => m_blackBoard = value; }
     [SerializeField]
     private PetBlackboard m_blackBoard;
-
+    // Says, if a behaviour was Choosen.
     private bool m_behaviourWasChoosen = false;
-
+    /// <summary>
+    /// Called at every Start of this State.
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="stateInfo"></param>
+    /// <param name="layerIndex"></param>
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         BlackBoard = GameManager.Instance.BlackBoard;
-        GameManager.Instance.BlackBoard.Current = null;
     }
+    /// <summary>
+    /// Chooses A behaviour.
+    ///     Checks first, if a Behaviour was triggered. 
+    ///     When no Behaviour was triggered, it chooses a random Behaviour
+    ///         Sums all Possibilites and saves their Borders.
+    ///         Generates a random number in this sum and chooses the Behaviour based on the borders.
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="stateInfo"></param>
+    /// <param name="layerIndex"></param>
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        //  Befehle, etc.
         if (!m_behaviourWasChoosen)
         {
             for (int i = 0; i < BlackBoard.AllBehaviors.Count; i++)
@@ -32,11 +48,11 @@ public class Evaluate : StateMachineBehaviour
                 }
             }
         }
+        //  autonomes Verhalten
         if (!m_behaviourWasChoosen)
         {
-            // Warscheinlichkeiten
             List<int> borders = new List<int>();
-            List<BehavoirEnum> behavoirEnums = new List<BehavoirEnum>();
+            List<BehaviourEnum> behavoirEnums = new List<BehaviourEnum>();
             int SumOfPossibilities = 0;
             foreach (ScriptablePossibilitie possibilitie in BlackBoard.AllPossibilities)
             {
@@ -67,31 +83,14 @@ public class Evaluate : StateMachineBehaviour
                     return;
                 }
             }
-
-
-            //for (int j = 0; j < BlackBoard.AllBehaviors.Count; j++)
-            //{
-            //    int rnd = Random.Range(0, 100);
-            //    ScriptablePossibilitie currentPossibilitie = new ScriptablePossibilitie();
-            //    for (int i = 0; i < BlackBoard.AllPossibilities.Count; i++)
-            //    {
-            //        if (BlackBoard.AllPossibilities[i].BelongingBehaviour == BlackBoard.AllBehaviors[j].BehaviorIndex)
-            //        {
-            //            currentPossibilitie = BlackBoard.AllPossibilities[i];
-            //        }
-            //    }
-
-            //    if (currentPossibilitie.Possibility >= rnd)
-            //    {
-            //        animator.SetInteger("CurrentBehavior", (int)BlackBoard.AllBehaviors[j].BehaviorIndex);
-            //        BlackBoard.Current = BlackBoard.AllBehaviors[j];
-            //        m_behaviourWasChoosen = true;
-            //        return;
-            //    }
-            //}
         }
-
     }
+    /// <summary>
+    /// Called at every Exit of this State.
+    /// </summary>
+    /// <param name="animator"></param>
+    /// <param name="stateInfo"></param>
+    /// <param name="layerIndex"></param>
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);

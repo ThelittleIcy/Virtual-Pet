@@ -4,32 +4,29 @@ using UnityEngine;
 
 public class SitDownAction : AAction
 {
-    // In Animation HasFinshed setzten
+    /// <summary>
+    /// Function, which is called at the Start of the Action. Sets up the Action and Animation.
+    /// </summary>
     public override void Start()
     {
         base.Start();
         GameManager.Instance.BlackBoard.Agent.enabled = false;
         Handler.ActivateSitting();
-        //Debug.Log("SitDown Start");
     }
-
+    /// <summary>
+    /// See AAction Update.
+    /// </summary>
     public override void Update()
     {
         base.Update();
-        //Debug.Log("SitDown Update");
     }
-
+    /// <summary>
+    /// See AAction Exit. Resets Action and Animation.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
         GameManager.Instance.BlackBoard.Agent.enabled = true;
         Handler.DeActivateSitting();
-        //Debug.Log("SitDown Exit");
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
-        HasFinished = true;
     }
 }

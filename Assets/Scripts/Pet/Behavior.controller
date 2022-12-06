@@ -191,6 +191,7 @@ MonoBehaviour:
   m_BehaviorIndex: 9
   m_effectiveReinforceReaction: 2
   m_effectivePunishmentReaction: 3
+  m_count: {fileID: 11400000, guid: 70e5c404a691049448acd53e1d2c1f1c, type: 2}
 --- !u!114 &-7594722420897229515
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,6 +229,7 @@ MonoBehaviour:
   m_BehaviorIndex: 6
   m_effectiveReinforceReaction: 2
   m_effectivePunishmentReaction: 4
+  m_count: {fileID: 11400000, guid: 52d0a01be1d0e934a8f92dfb8a85f7a2, type: 2}
 --- !u!1101 &-7425467759012641786
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -353,6 +355,7 @@ MonoBehaviour:
   m_BehaviorIndex: 2
   m_effectiveReinforceReaction: 1
   m_effectivePunishmentReaction: 4
+  m_count: {fileID: 11400000, guid: 2027f7544b030ee439a7ee7dd0bcb03d, type: 2}
 --- !u!1102 &-4386442724849162014
 AnimatorState:
   serializedVersion: 6
@@ -601,6 +604,7 @@ MonoBehaviour:
   m_BehaviorIndex: 8
   m_effectiveReinforceReaction: 1
   m_effectivePunishmentReaction: 4
+  m_count: {fileID: 11400000, guid: 86f8bf9c9446aba45b8bfe1966d7e7e9, type: 2}
 --- !u!1107 &-715410086310902975
 AnimatorStateMachine:
   serializedVersion: 6
@@ -678,6 +682,7 @@ MonoBehaviour:
   m_BehaviorIndex: 7
   m_effectiveReinforceReaction: 1
   m_effectivePunishmentReaction: 3
+  m_count: {fileID: 11400000, guid: 152ff03ec8fb0944b9fc94c6c37697ff, type: 2}
 --- !u!114 &-360938001416875597
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -700,6 +705,7 @@ MonoBehaviour:
   m_BehaviorIndex: 1
   m_effectiveReinforceReaction: 2
   m_effectivePunishmentReaction: 3
+  m_count: {fileID: 11400000, guid: 112c022c25898024bb893066d31b8702, type: 2}
 --- !u!91 &9100000
 AnimatorController:
   m_ObjectHideFlags: 0
@@ -762,6 +768,7 @@ MonoBehaviour:
   m_BehaviorIndex: 4
   m_effectiveReinforceReaction: 1
   m_effectivePunishmentReaction: 3
+  m_count: {fileID: 11400000, guid: 561af3810c2a4744aa91625a434d67e6, type: 2}
 --- !u!1102 &441157390814681846
 AnimatorState:
   serializedVersion: 6
@@ -1304,6 +1311,7 @@ MonoBehaviour:
   m_BehaviorIndex: 3
   m_effectiveReinforceReaction: 2
   m_effectivePunishmentReaction: 4
+  m_count: {fileID: 11400000, guid: 5b6e87e4f796fc840a4aa1d165028e78, type: 2}
 --- !u!114 &8321563201510556830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1358,6 +1366,7 @@ MonoBehaviour:
   m_BehaviorIndex: 5
   m_effectiveReinforceReaction: 1
   m_effectivePunishmentReaction: 3
+  m_count: {fileID: 11400000, guid: 43d2df94e0d5ed043b59dee822a30b0b, type: 2}
 --- !u!1101 &8569850374913476503
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

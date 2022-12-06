@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+// The different Behaviours
+public enum BehaviourEnum
+{
+    NOTHING = 0,
+    BARK = 1,
+    PICKUP = 2,
+    RUNAWAY = 3,
+    SIT = 4,
+    COME = 5,
+    RUNTOTARGET = 6,
+    FOLLOW = 7,
+    TURNAROUND = 8, 
+    DIGGING = 9
+}

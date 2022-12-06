@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
+    // The Attachpoint at the Player.
     [SerializeField]
     private GameObject m_attachPoint;
-
+    // The Interaction.
     [SerializeField]
     private InteractionHandler m_interaction;
-
-    public bool IsPickedUp
+    // Says, if the Player has the Ball picked up.
+    public bool IsPickedUpbyPlayer
     {
-        get => m_isPickedUp;
+        get => m_isPickedUpByPlayer;
         set
         {
-            m_isPickedUp = value;
+            m_isPickedUpByPlayer = value;
         }
     }
+    // Says, if the Ball can be picked up by the Player or Pet.
     public bool CanBePickedUp
     {
         get => m_canBePickedUp;
@@ -26,30 +28,33 @@ public class BallController : MonoBehaviour
             m_canBePickedUp = value;
         }
     }
-
     [SerializeField]
-    private bool m_isPickedUp = false;
+    private bool m_isPickedUpByPlayer = false;
 
     [SerializeField]
     private bool m_canBePickedUp = true;
-
+    // The Rigidbody of the Ball.
     [SerializeField]
     private Rigidbody m_rb;
-
+    // The Throw Force.
     [SerializeField]
     private float m_throwForce = 1.5f;
-
+    // The Timer how long the Player loads for the Throwing of the Ball.
     [SerializeField]
     private float m_timer = 0;
+    /// <summary>
+    /// Sets the Rigidbody.
+    /// </summary>
     private void Awake()
     {
         m_rb = GetComponent<Rigidbody>();
     }
-
-
+    /// <summary>
+    /// Check if the Ball can be Picked up or if it is currently picked up.
+    /// Handles the Input.
+    /// </summary>
     private void Update()
     {
-
         if (m_interaction.IsActivated)
         {
             if (m_canBePickedUp)
@@ -59,7 +64,7 @@ public class BallController : MonoBehaviour
                     PickUpPlayer();
                 }
             }
-            else if (m_isPickedUp)
+            else if (m_isPickedUpByPlayer)
             {
                 if (Input.GetKey(KeyCode.F))
                 {
@@ -81,7 +86,9 @@ public class BallController : MonoBehaviour
             }
         }
     }
-
+    /// <summary>
+    /// Lets the Player Pick up the Ball.
+    /// </summary>
     public void PickUpPlayer()
     {
         this.GetComponentInChildren<SphereCollider>().enabled = false;
@@ -89,20 +96,24 @@ public class BallController : MonoBehaviour
         this.GetComponent<Rigidbody>().useGravity = false;
         this.transform.SetParent(m_attachPoint.gameObject.transform);
         this.transform.position = m_attachPoint.transform.position;
-        IsPickedUp = true;
+        IsPickedUpbyPlayer = true;
         CanBePickedUp = false;
     }
-
+    /// <summary>
+    ///  The Player lets the Ball Go.
+    /// </summary>
     public void LetGoPlayer()
     {
         this.GetComponentInChildren<SphereCollider>().enabled = true;
         this.GetComponent<Rigidbody>().isKinematic = false;
         this.GetComponent<Rigidbody>().useGravity = true;
         this.transform.SetParent(null);
-        IsPickedUp = false;
+        IsPickedUpbyPlayer = false;
         CanBePickedUp = true;
     }
-
+    /// <summary>
+    /// The Player Throws the Ball.
+    /// </summary>
     public void Throw()
     {
         LetGoPlayer();

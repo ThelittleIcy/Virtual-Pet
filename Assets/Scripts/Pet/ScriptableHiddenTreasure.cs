@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Pet/Treasure", fileName = "ScriptableTreasure")]
 public class ScriptableHiddenTreasure : ScriptableObject
 {
+    // The Position of the Hidden Treasure
     public Vector3 Postition { get => m_postition; set => m_postition = value; }
     [SerializeField]
     private Vector3 m_postition;

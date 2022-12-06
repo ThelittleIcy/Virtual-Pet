@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowAction : AAction
+public class FollowAction : WalkToLocationAction
 {
-
+    /// <summary>
+    /// Function, which is called at the Start of the Action. Sets up this Action and Animation.
+    /// </summary>
     public override void Start()
     {
         base.Start();
@@ -12,37 +14,30 @@ public class FollowAction : AAction
         GameManager.Instance.BlackBoard.Agent.isStopped = false;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 3f;
     }
-
+    /// <summary>
+    /// Selects the Aim and Animation and Moves to the Destination. 
+    /// Does not check, if it is close.
+    /// This Action will only end, when the Player ends it.
+    /// </summary>
     public override void Update()
     {
-        base.Update();
-        if (GameManager.Instance.BlackBoard.Agent.velocity == Vector3.zero)
-        {
-            Handler.DeActivateWalking();
-        }
-        else
-        {
-            Handler.ActivateWalking();
-        }
+        SelectAim();
+        DetermineCurrentAnimation();
         Move();
     }
-
+    /// <summary>
+    /// Function, which is called at the End of the Action. Resets this Action and Animation.
+    /// </summary>
     public override void Exit()
     {
         base.Exit();
-        Handler.DeActivateWalking();
+    }
+    /// <summary>
+    /// Sets the Destination to the Player.
+    /// </summary>
+    public override void SelectAim()
+    {
+        Aim = GameManager.Instance.Player.transform.position;
         GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
-        GameManager.Instance.BlackBoard.Agent.isStopped = true;
-    }
-
-    private void Move()
-    {
-        GameManager.Instance.BlackBoard.Agent.SetDestination(GameManager.Instance.Player.transform.position);
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
-        HasFinished = true;
     }
 }

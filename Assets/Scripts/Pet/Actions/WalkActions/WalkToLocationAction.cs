@@ -4,21 +4,71 @@ using UnityEngine;
 
 public class WalkToLocationAction : AAction
 {
+    // The Destination, to which this gameObject should move to.
     public Vector3 Aim { get => m_aim; set => m_aim = value; }
     [SerializeField]
     private Vector3 m_aim;
+
+    /// <summary>
+    /// Function, which is called at the Start of the Action. Sets up this Action and Animation.
+    /// </summary>
     public override void Start()
     {
         GameManager.Instance.BlackBoard.Agent.isStopped = false;
         base.Start();
 
         Handler.ActivateWalking();
-        //ChooseAim();
     }
-
+    /// <summary>
+    /// Moves this GameObject to the Destination. Checks if it is still moving.
+    /// </summary>
     public override void Update()
     {
         base.Update();
+        Move();
+        DetermineCurrentAnimation();
+        CheckFinished();
+    }
+    /// <summary>
+    /// Handles the End of this Action. Stops the NavmeshAgent.
+    /// </summary>
+    public override void Exit()
+    {
+        base.Exit();
+        GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
+        GameManager.Instance.BlackBoard.Agent.isStopped = true;
+        Handler.DeActivateWalking();
+    }
+    /// <summary>
+    /// Function, which Defines the Aim (or Destination).
+    /// </summary>
+    public virtual void SelectAim()
+    {
+
+    }
+
+    /// <summary>
+    /// Moves the NavmeshAgent.
+    /// </summary>
+    public virtual void Move()
+    {
+        GameManager.Instance.BlackBoard.Agent.SetDestination(Aim);
+    }
+    /// <summary>
+    /// Ends the Action, when the Navmesh is close to the Destination.
+    /// </summary>
+    public virtual void CheckFinished()
+    {
+        if (isClose())
+        {
+            HasFinished = true;
+        }
+    }
+    /// <summary>
+    /// Sets the Animation.
+    /// </summary>
+    public void DetermineCurrentAnimation()
+    {
         if (GameManager.Instance.BlackBoard.Agent.velocity == Vector3.zero)
         {
             Handler.DeActivateWalking();
@@ -27,69 +77,11 @@ public class WalkToLocationAction : AAction
         {
             Handler.ActivateWalking();
         }
-        Move();
     }
-
-    public override void Exit()
-    {
-        base.Exit();
-        GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
-        GameManager.Instance.BlackBoard.Agent.isStopped = true;
-        Handler.DeActivateWalking();
-        //Debug.Log("WalkTo Exit");
-    }
-
-    public virtual void SelectAim()
-    {
-
-    }
-
-    //private void ChooseAim()
-    //{
-    //    switch (Behaviour)
-    //    {
-    //        case BehavoirEnum.NOTHING:
-    //            break;
-    //        case BehavoirEnum.BARK:
-    //            Aim = GameManager.Instance.Enemy;
-    //            GameManager.Instance.BlackBoard.Agent.stoppingDistance = 4f;
-    //            break;
-    //        case BehavoirEnum.PICKUP:
-    //            Aim = GameManager.Instance.Ball;
-    //            Debug.Log("Ball: " + GameManager.Instance.Ball.transform.position);
-    //            GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
-    //            break;
-    //        case BehavoirEnum.RUNAWAY:
-    //            Aim.transform.position = GameManager.Instance.Ball.transform.position;
-    //            GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
-    //            break;
-    //        case BehavoirEnum.SIT:
-    //            break;
-    //        case BehavoirEnum.COME:
-    //            Aim = GameManager.Instance.Player;
-    //            GameManager.Instance.BlackBoard.Agent.stoppingDistance = 3f;
-    //            break;
-    //        case BehavoirEnum.RUNTOTARGET:
-    //            Aim = GameManager.Instance.Pillow;
-    //            GameManager.Instance.BlackBoard.Agent.stoppingDistance = 1f;
-    //            break;
-    //        case BehavoirEnum.LETGO:
-    //            Aim = GameManager.Instance.Player;
-    //            GameManager.Instance.BlackBoard.Agent.stoppingDistance = 3f;
-    //            break;
-    //        default:
-    //            break;
-    //    }
-    //}
-    private void Move()
-    {
-        GameManager.Instance.BlackBoard.Agent.SetDestination(Aim);
-        if (isClose())
-        {
-            HasFinished = true;
-        }
-    }
-
+    /// <summary>
+    /// Checks, if the NavmeshAgent is close to the Destination
+    /// </summary>
+    /// <returns>true, if it close; false if it is not close</returns>
     private bool isClose()
     {
         if (CalculateDistanceToAim() <= GameManager.Instance.BlackBoard.Agent.stoppingDistance)
@@ -98,15 +90,12 @@ public class WalkToLocationAction : AAction
         }
         return false;
     }
-
+    /// <summary>
+    /// Calculates the Distance to the Destination.
+    /// </summary>
+    /// <returns>float distance</returns>
     private float CalculateDistanceToAim()
     {
         return Vector3.Distance(Aim, GameManager.Instance.BlackBoard.gameObject.transform.position);
-    }
-
-    [ContextMenu("IsFinished")]
-    public void SetFinished()
-    {
-        HasFinished = true;
     }
 }
