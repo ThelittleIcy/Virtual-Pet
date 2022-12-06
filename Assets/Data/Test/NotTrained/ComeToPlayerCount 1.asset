@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c694b5d399621c1459a30d9106a2c2dc, type: 3}
-  m_Name: BarkCommand
+  m_Script: {fileID: 11500000, guid: 170a63c22ce610c45affd0cf573c3920, type: 3}
+  m_Name: ComeToPlayerCount 1
   m_EditorClassIdentifier: 
-  m_possibility: 99
-  m_belongingBehaviour: 1
+  m_value: 33
